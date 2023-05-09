@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+}
+
+body{
+    background: white;
+}
+
+
+/* ------------ HEADER ------------ */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: mintcream;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100 ;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: arya;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+ 
+.logo{
+   
+    font-family: copperplate;
+    font-size: 35px;
+    color: #009ABC;
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.logo :hover{
+    text-decoration: none;
+}
+
+.navbar a {
+    font-family: copperplate;
+    display: inline-block;
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 1s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #009ABC; 
+   
+    text-decoration: none;
+
+}
+
+/* ------------ HOME ------------ */
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.homepic img{
+    width: 611px;
+    height: 480px;
+    opacity: 0;
+    animation: zoomIn .5s ease forwards,rotate 4s infinite linear ;
+    animation-delay: 1s  ;
+    box-shadow: 0 0 10px #3bc,
+    0 0 20px #3bc;  
+}
+
+.content{
+    max-width: 600px;
+}
+
+.content h3{
+    font-family: arya;
+    font-size: 40px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom .5s ease forwards;
+    animation-delay: .7s;
+}
+
+.content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop .5s ease forwards;
+    animation-delay: .7s;
+    
+}
+
+.content h3 span{
+     color:#009ABC;
+}
+
+.content h1{
+    font-family: arya;
+    font-size: 86px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight .5s ease forwards;
+    animation-delay: 1s;
+}
+
+/* ------------ Keyframes animation ------------ */
+
+@keyframes slideRight  {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes slideTop  {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }  
+}
+
+@keyframes slideBottom  {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }  
+}
+
+@keyframes zoomIn  {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        
+    }    
+}
+
+/* @keyframes rotate {
+    0%{
+     transform: rotate(0deg);
+    } 
+    50%{
+        scale: 2;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ } */
+
+
+
+
+ /* ------------ ABOUT ------------ */
+ .about{
+    width: 100%;
+    padding: 90px 0px;
+   
+}
+.about img{
+    margin-left: -90px;
+    height: auto;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards,floatImage 4s ease-in-out infinite;
+    animation-delay:.2s, 3s; 
+}
+.about{
+    background-color: mintcream;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h2{
+    margin-left: 40px;
+    margin-top: -20px;
+    color: #009ABC;
+    font-size: 35px;
+    font-family: arya;
+
+}
+.about-text h5{
+    color: white;
+    letter-spacing: 2px;
+    font-size:22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: black;
+    font-size: 20px;
+    font-family: arya;
+    margin-left: 38px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.button1 {
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: arya;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 1s;
+    margin-left: 35px;
+  }
+  
+  .button1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button1:hover span {
+    padding-right: 25px;
+  }
+  
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+/* ------------ LANGUAGES ------------ */
+
+.languages{
+    margin-top: 100px;
+}
+
+.lang{
+    padding: 0 140px;
+}
+
+.lang h2{
+    color: #009ABC;
+    font-family: Poppins;
+    font-size: 35px;
+}
+.pic2{
+    width: 135px;
+}
+.pic1{
+    width: 90px;
+}
+
+.lang p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 140px;
+    
+}
+
+/* ------------ LATEST PROJECTS ------------ */
+
+.text{
+    padding: 0 140px
+}
+.latest{
+    background-color: mintcream;
+}
+
+.text h2{
+    color: #009ABC;
+    font-family: Poppins;
+    font-size: 35px;
+}
+
+.text p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 140px;
+}
+
+.latest-btn{
+    margin-left: 140px;
+}
+
+
+/* ----------- CONTACT US ----------- */
+
+.contact h2{
+    color: #009ABC;
+    font-family: Poppins;
+    font-size: 35px;
+    margin-top: 70px;
+    margin-left: -20px;
+  }
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #000;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* input[type=submit]:hover {
+    background-color: grey;
+  } */
+
+  
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide,
+   make the two columns stack on top of each other instead of next
+    to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
